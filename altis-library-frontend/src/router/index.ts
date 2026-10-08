@@ -1,10 +1,6 @@
 import { defineRouter } from '#q-app';
-import {
-  createMemoryHistory,
-  createRouter,
-  createWebHashHistory,
-  createWebHistory,
-} from 'vue-router';
+import { createMemoryHistory, createRouter, createWebHashHistory, createWebHistory, } from 'vue-router';
+import { Permissions } from '../constants/permissions.constants';
 
 import routes from './routes';
 
@@ -30,7 +26,25 @@ export default defineRouter((/* { store, ssrContext } */) => {
     // quasar.conf.js -> build -> vueRouterMode
     // quasar.conf.js -> build -> publicPath
     history: createHistory(import.meta.env.QUASAR_VUE_ROUTER_BASE)
+    
   });
+
+
+  Router.beforeEach((to) => {
+    const userRole = localStorage.getItem('user_role')
+    const allowedPermissions = to.meta.permissions as string[] | undefined
+
+    if (allowedPermissions) {
+      if (!userRole) return true 
+
+      if (!allowedPermissions.includes(userRole)) {
+        if (userRole === Permissions.ADMIN) return '/admin/dashboard'
+        if (userRole === Permissions.USER) return '/user/dashboard'
+      }
+    }
+
+    return true
+  })
 
   return Router;
 });

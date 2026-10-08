@@ -17,7 +17,7 @@ const api = axios.create({
 
 // "async" is optional;
 // more info on params: https://v2.quasar.dev/quasar-cli-vite/boot-files
-export default defineBoot(async ({ app, router}) => {
+export default defineBoot(({ app, router}) => {
   api.interceptors.request.use((config) => {
     const token = localStorage.getItem('token')
     if (token && config.headers){
@@ -33,7 +33,7 @@ export default defineBoot(async ({ app, router}) => {
         localStorage.removeItem('token')
         void router.push('/login') 
       }
-      return Promise.reject(error)
+      return Promise.reject(error instanceof Error ? error : new Error(String(error)))
 
   }
 )
