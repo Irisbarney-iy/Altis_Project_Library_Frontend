@@ -9,18 +9,20 @@
             </div>
                 <q-space/>
 
-                <div class="row items-center">
-                    <div class="column items-end q-mr-md text-right">
-                        <span class="text-weight-bold text-uppercase label-name">TESTE DE NOME</span>
-                        <span class="text-caption label-sub">configurações</span>
-                    </div>
-                    <q-avatar size="42px" color="brown-14" text-color="amber-2" icon="person"/>
+            <div class="row items-center cursor-pointer relative-position">
+                <div class="column items-end q-mr-md text-right">
+                    <span class="text-weight-bold text-uppercase user-name">LEVY FERNANDES</span>
+                    <span class="text-caption user-configurations">{{ $t('header.settings') }}</span>
                 </div>
+                <q-avatar size="42px" color="amber-2" text-color="brown-10" icon="person" />
+                <UserSettingsMenu />
+            </div>
         </q-toolbar>
     </q-header>
 </template>
 
 <script setup lang="ts">
+import UserSettingsMenu from './SettingsMenu.vue'
 defineProps({showToggle: {type: Boolean, default: true}})
 defineEmits(['toggle-drawer'])
 </script>
