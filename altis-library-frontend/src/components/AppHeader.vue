@@ -4,7 +4,6 @@
             <q-btn v-if="showToggle" flat dense round icon="menu" aria-label="Menu" class="q-mr-sm" @click="$emit('toggle-drawer')"/>
 
             <div class="row items-center cursor-pointer" @click="$router.push('/')">
-                <q-icon name="book" size="32px" class="q-mr-sm"/>
                 <span class="text-h6 text-weight-bold">BibliotecaBooks</span>
             </div>
                 <q-space/>

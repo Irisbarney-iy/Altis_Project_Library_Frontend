@@ -1,8 +1,8 @@
 <template>
     <q-list padding class="menu-list">
-        <q-item v-for="item in menuItems" :key="item.title" clickable v-ripple :to="item.link" active-class="active-menu-item" class="menu-item q-my-xs">
+        <q-item v-for="item in menuItems" :key="item.titleKey" clickable v-ripple :to="item.link" active-class="active-menu-item" class="menu-item q-my-xs">
             <q-item-section>
-                <q-item-label class="text-weight-bold text-uppercase">{{ $t(item.title) }}
+                <q-item-label class="text-weight-bold text-uppercase">{{ $t(item.titleKey) }}
             </q-item-label>
             </q-item-section>
         </q-item>
@@ -13,17 +13,17 @@
 import { Permissions } from '../constants/permissions.constants'
 
 interface MenuItem{
-    title: string
+    titleKey: string
     link: string
     permissions: string[]
 }
 
 const menuItems: MenuItem[] = [
-    { title: 'Dashboard', link: '/admin/dashboard', permissions: [Permissions.ADMIN] },
-    { title: 'Empréstimos', link: '/admin/loans', permissions: [Permissions.ADMIN] },
-    { title: 'Usuários', link: '/admin/users', permissions: [Permissions.ADMIN] },
-    { title: 'Livros', link: '/admin/books', permissions: [Permissions.ADMIN] },
-    { title: 'Editoras', link: '/admin/publishers', permissions: [Permissions.ADMIN] }
+    { titleKey: 'menu.dashboard', link: '/admin/dashboard', permissions: [Permissions.ADMIN] },
+    { titleKey: 'menu.loans', link: '/admin/loans', permissions: [Permissions.ADMIN] },
+    { titleKey: 'menu.users', link: '/admin/users', permissions: [Permissions.ADMIN] },
+    { titleKey: 'menu.books', link: '/admin/books', permissions: [Permissions.ADMIN] },
+    { titleKey: 'menu.publishers', link: '/admin/publishers', permissions: [Permissions.ADMIN] }
 ]
 
 </script>
