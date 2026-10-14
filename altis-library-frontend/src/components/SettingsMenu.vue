@@ -1,5 +1,5 @@
 <template>
-    <q-menu auto-close anchor="bottom right" self="top right" class="setting-dropdown">
+    <q-menu v-close-popup anchor="bottom right" self="top right" class="setting-dropdown">
         <q-list class="settings-list q-py-xs">
             <q-item v-if="userRole === Permissions.ADMIN" clickable v-ripple @click="navigateTo('/admin/preferences')"
                 class="settings-item">
