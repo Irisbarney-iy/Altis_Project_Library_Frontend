@@ -4,7 +4,23 @@ import { Permissions } from '../constants/permissions.constants'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/admin/dashboard'
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    component: () => import('../pages/auth/LoginPage.vue')
+  },
+  {
+    path: '/register',
+    component: () => import('../pages/auth/RegisterPage.vue')
+  },
+  {
+    path: '/forgot-password',
+    component: () => import('../pages/auth/ForgotPasswordPage.vue')
+  },
+  {
+    path: '/reset-password',
+    component: () => import('../pages/auth/ResetPasswordPage.vue')
   },
   {
     path: '/admin',

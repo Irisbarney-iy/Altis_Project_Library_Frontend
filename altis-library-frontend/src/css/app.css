@@ -1,1 +1,26 @@
 /* app global css */
+:root {
+    --color-primary: #B15505;
+    --color-secondary: #8C4304;
+    --color-bg-light: #FFF3D8;
+}
+
+.text-primary-text{
+    color: #B15505 !important;
+}
+
+.text-secondary-text{
+    color: #FFF3D8 !important;
+}
+
+.text-brand-subtle{
+    color: #8C4304 !important;
+}
+
+.bg-main-light{
+    background-color: #FFF3D8 !important;
+}
+
+.bg-main-dark{
+    background-color: #B15505 !important;
+}

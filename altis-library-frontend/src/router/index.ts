@@ -1,6 +1,7 @@
 import { defineRouter } from '#q-app';
 import { createMemoryHistory, createRouter, createWebHashHistory, createWebHistory, } from 'vue-router';
 import { Permissions } from '../constants/permissions.constants';
+import { LocalStorage } from 'quasar'
 
 import routes from './routes';
 
@@ -31,15 +32,23 @@ export default defineRouter((/* { store, ssrContext } */) => {
 
 
   Router.beforeEach((to) => {
-    const userRole = localStorage.getItem('user_role')
+    const userRole = LocalStorage.getItem<string>('user_role')
     const allowedPermissions = to.meta.permissions as string[] | undefined
 
+    if(userRole && (to.path === '/login' || to.path === '/registes')){
+        if (userRole === Permissions.ADMIN) return '/admin/dashboard'
+        if (userRole === Permissions.USER) return '/user/dashboard'
+    }
+
     if (allowedPermissions) {
-      if (!userRole) return true 
+      if (!userRole){
+        return '/login'
+      }
 
       if (!allowedPermissions.includes(userRole)) {
         if (userRole === Permissions.ADMIN) return '/admin/dashboard'
         if (userRole === Permissions.USER) return '/user/dashboard'
+        return '/login'
       }
     }
 
