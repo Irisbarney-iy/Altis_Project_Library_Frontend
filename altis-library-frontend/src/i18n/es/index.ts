@@ -43,6 +43,29 @@ export default {
     noAccount: '¿No tienes una cuenta?',
     signUpHere: 'Regístrate aquí',
     hasAccount: '¿Ya tienes una cuenta?',
-    loginHere: 'Inicia sesión aquí'
+    loginHere: 'Inicia sesión aquí',
+    validation: {
+      nameRequired: '¡El nombre es obligatorio!',
+      nameLength: 'El nombre debe tener entre 3 y 100 caracteres',
+      emailRequired: '¡El correo electrónico es obligatorio!',
+      emailPattern: '¡El correo debe terminar en @gmail.com!',
+      cpfRequired: '¡El CPF es obligatorio!',
+      cpfInvalid: '¡CPF inválido!',
+      pastDate: '¡La fecha de nacimiento debe ser en el pasado!',
+      minAge: '¡El arrendatario debe tener al menos 6 años!',
+      phoneRequired: '¡El teléfono es obligatorio!',
+      phoneInvalid: 'Teléfono inválido',
+      birthDateRequired: '¡La fecha de nacimiento es obligatoria!',
+      addressRequired: '¡La dirección es obligatoria!',
+      addressMax: 'La dirección debe tener como máximo 255 caracteres',
+      passwordRequired: 'La contraseña es obligatoria',
+      passwordRules: 'La contraseña debe tener entre 8 y 15 caracteres, letras, números y símbolos',
+      confirmPasswordRequired: 'Confirme su contraseña',
+      passwordMatch: 'Las contraseñas no coinciden'
+    },
+    notifications: {
+      registerSuccess: '¡Registro realizado con éxito! Inicie sesión.',
+      registerError: 'Error al registrarse. Verifique la información.'
+    }
   }
 }
