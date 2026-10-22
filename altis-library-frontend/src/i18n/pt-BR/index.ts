@@ -49,7 +49,7 @@ export default {
       nameRequired: 'O nome é obrigatório!',
       nameLength: 'O nome deve ter entre 3 e 100 caracteres',
       emailRequired: 'O e-mail é obrigatório!',
-      emailPattern: 'O e-mail deve ser com @gmail.com!',
+      emailPattern: 'O e-mail deve ser com {\'@\'}gmail.com!',
       cpfRequired: 'O CPF é obrigatório!',
       cpfInvalid: 'CPF inválido!',
       pastDate: 'A data de nascimento deve ser no passado!',

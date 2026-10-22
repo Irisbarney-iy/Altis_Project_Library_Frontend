@@ -28,8 +28,10 @@ const api = axios.create({
 export default defineBoot(({ app, router}) => {
   api.interceptors.request.use((config) => {
     const token = LocalStorage.getItem<string>('token')
-    if (token && config.headers){
+    if (token && token !== 'null' && token !== 'undefined' && config.headers){
       config.headers.Authorization = `Bearer ${token}`
+    }else if(config.headers){
+      delete config.headers.Authorization
     }
     return config
   })

@@ -49,7 +49,7 @@ export default {
       nameRequired: 'Full name is required!',
       nameLength: 'Name must be between 3 and 100 characters',
       emailRequired: 'Email is required!',
-      emailPattern: 'Email must end with @gmail.com!',
+      emailPattern: 'Email must end with {\'@\'}gmail.com!',
       cpfRequired: 'CPF is required!',
       cpfInvalid: 'Invalid CPF!',
       pastDate: 'Birth date must be in the past!',
