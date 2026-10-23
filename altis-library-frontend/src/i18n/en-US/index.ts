@@ -67,6 +67,23 @@ export default {
     notifications: {
       registerSuccess: 'Registration successful! Please log in.',
       registerError: 'Registration failed. Please check your information.'
+    },
+      common: {
+      filter: 'Filter',
+      showingPagination: 'Showing {from} to {to} of {total} users',
+      mostRecent: 'Most Recent'
+    },
+    users: {
+      title: 'USERS',
+      searchPlaceholder: 'Search users...',
+      name: 'Name',
+      email: 'Email',
+      phone: 'Phone',
+      status: 'Status',
+      actions: 'Actions',
+      active: 'Active',
+      inactive: 'Inactive',
+      noUsersFound: 'No users found.'
     }
   }
 }

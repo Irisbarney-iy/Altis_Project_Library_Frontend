@@ -23,12 +23,13 @@ const routes: RouteRecordRaw[] = [
     component: () => import('../pages/auth/ResetPasswordPage.vue')
   },
   {
-    path: '/admin',
+  path: '/admin',
     component: () => import('../layouts/AdminLayout.vue'),
     meta: { permissions: [Permissions.ADMIN] },
     children: [
-      { path: 'dashboard', component: () => import('../pages/AdminDashboard.vue') }
-    ]
+      { path: 'dashboard', component: () => import('../pages/AdminDashboard.vue') },
+      { path: 'users', component: () => import('../pages/admin/UsersPage.vue') }
+  ]
   },
   {
     path: '/user',

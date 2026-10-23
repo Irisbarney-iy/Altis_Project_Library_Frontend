@@ -67,6 +67,23 @@ export default {
     notifications: {
       registerSuccess: 'Cadastro realizado com sucesso! Faça seu login.',
       registerError: 'Falha ao realizar cadastro. Verifique as informações.'
+    },
+    common: {
+      filter: 'Filtrar',
+      showingPagination: 'Mostrando de {from} a {to} de {total} usuários',
+      mostRecent: 'Mais recente'
+    },
+    users: {
+      title: 'USUÁRIOS',
+      searchPlaceholder: 'Buscar usuários...',
+      name: 'Nome',
+      email: 'E-mail',
+      phone: 'Telefone',
+      status: 'Status',
+      actions: 'Ações',
+      active: 'Ativo',
+      inactive: 'Inativo',
+      noUsersFound: 'Nenhum usuário encontrado.'
     }
   }
 }

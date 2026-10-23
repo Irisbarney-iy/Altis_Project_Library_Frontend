@@ -66,6 +66,23 @@ export default {
     notifications: {
       registerSuccess: '¡Registro realizado con éxito! Inicie sesión.',
       registerError: 'Error al registrarse. Verifique la información.'
+    },
+    common: {
+      filter: 'Filtrar',
+      showingPagination: 'Mostrando de {from} a {to} de {total} usuarios',
+      mostRecent: 'Más Reciente'
+    },
+    users: {
+      title: 'USUARIOS',
+      searchPlaceholder: 'Buscar usuarios...',
+      name: 'Nombre',
+      email: 'Correo electrónico',
+      phone: 'Teléfono',
+      status: 'Estado',
+      actions: 'Acciones',
+      active: 'Activo',
+      inactive: 'Inactivo',
+      noUsersFound: 'No se encontraron usuarios.'
     }
   }
 }
