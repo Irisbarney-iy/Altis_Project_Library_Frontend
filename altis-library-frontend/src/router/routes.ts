@@ -29,7 +29,8 @@ const routes: RouteRecordRaw[] = [
     children: [
       { path: 'dashboard', component: () => import('../pages/AdminDashboard.vue') },
       { path: 'users', component: () => import('../pages/admin/UsersPage.vue') },
-      { path: 'publishers', component: () => import('../pages/admin/PublishersPage.vue') }
+      { path: 'publishers', component: () => import('../pages/admin/PublishersPage.vue') },
+      { path: 'books', component: () => import('../pages/admin/BooksPage.vue') }
     ]
   },
   {

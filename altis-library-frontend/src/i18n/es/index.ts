@@ -70,7 +70,7 @@ export default {
   },
   common: {
     filter: 'Filtrar',
-    showingPagination: 'Mostrando de {from} a {to} de {total} editoriales',
+    showingPagination: 'Mostrando de {from} a {to} de {total} elementos',
     mostRecent: 'Más reciente',
     cancel: 'Cancelar',
     save: 'Guardar',
@@ -104,6 +104,29 @@ export default {
       nameRequired: '¡El nombre de la editorial es obligatorio!',
       deleteConfirmTitle: 'Confirmar Eliminación',
       deleteConfirmMessage: '¿Está seguro de que desea eliminar la editorial "{name}"?'
+    }
+  },
+  books: {
+    title: 'LIBROS',
+    searchPlaceholder: 'Buscar libros...',
+    newBook: 'Nuevo Libro',
+    bookTitle: 'Título',
+    author: 'Autor',
+    launchYear: 'Lanzamiento',
+    total: 'Total',
+    inUse: 'En uso',
+    publisher: 'Editorial',
+    actions: 'Acciones',
+    noBooksFound: 'No se encontraron libros.',
+    dialog: {
+      createTitle: 'Nuevo Libro',
+      editTitle: 'Editar Libro',
+      titleRequired: '¡El título es obligatorio!',
+      authorRequired: '¡El autor es obligatorio!',
+      quantityRequired: '¡La cantidad total es obligatoria!',
+      publisherRequired: '¡La editorial es obligatoria!',
+      deleteConfirmTitle: 'Confirmar Eliminación',
+      deleteConfirmMessage: '¿Está seguro de que desea eliminar el libro "{title}"?'
     }
   }
 }

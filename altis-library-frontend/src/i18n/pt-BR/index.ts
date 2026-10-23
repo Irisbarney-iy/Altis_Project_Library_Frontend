@@ -70,7 +70,7 @@ export default {
   },
   common: {
     filter: 'Filtrar',
-    showingPagination: 'Mostrando de {from} a {to} de {total} editoras',
+    showingPagination: 'Mostrando de {from} a {to} de {total} itens',
     mostRecent: 'Mais recente',
     cancel: 'Cancelar',
     save: 'Salvar',
@@ -86,7 +86,7 @@ export default {
     actions: 'Ações',
     active: 'Ativo',
     inactive: 'Inativo',
-    noUsersFound: 'Nenhum usuário encontrado.'
+    noUsersFound: 'Nenum usuário encontrado.'
   },
   publishers: {
     title: 'EDITORAS',
@@ -104,6 +104,29 @@ export default {
       nameRequired: 'O nome da editora é obrigatório!',
       deleteConfirmTitle: 'Confirmar Exclusão',
       deleteConfirmMessage: 'Tem certeza que deseja excluir a editora "{name}"?'
+    }
+  },
+  books: {
+    title: 'LIVROS',
+    searchPlaceholder: 'Buscar livros...',
+    newBook: 'Novo Livro',
+    bookTitle: 'Título',
+    author: 'Autor',
+    launchYear: 'Lançamento',
+    total: 'Total',
+    inUse: 'Em uso',
+    publisher: 'Editora',
+    actions: 'Ações',
+    noBooksFound: 'Nenhum livro encontrado.',
+    dialog: {
+      createTitle: 'Novo Livro',
+      editTitle: 'Editar Livro',
+      titleRequired: 'O título é obrigatório!',
+      authorRequired: 'O autor é obrigatório!',
+      quantityRequired: 'A quantidade total é obrigatória!',
+      publisherRequired: 'A editora é obrigatória!',
+      deleteConfirmTitle: 'Confirmar Exclusão',
+      deleteConfirmMessage: 'Tem certeza que deseja excluir o livro "{title}"?'
     }
   }
 }

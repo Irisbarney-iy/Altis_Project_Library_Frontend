@@ -70,7 +70,7 @@ export default {
   },
   common: {
     filter: 'Filter',
-    showingPagination: 'Showing {from} to {to} of {total} publishers',
+    showingPagination: 'Showing {from} to {to} of {total} items',
     mostRecent: 'Most recent',
     cancel: 'Cancel',
     save: 'Save',
@@ -104,6 +104,29 @@ export default {
       nameRequired: 'Publisher name is required!',
       deleteConfirmTitle: 'Confirm Deletion',
       deleteConfirmMessage: 'Are you sure you want to delete publisher "{name}"?'
+    }
+  },
+  books: {
+    title: 'BOOKS',
+    searchPlaceholder: 'Search books...',
+    newBook: 'New Book',
+    bookTitle: 'Title',
+    author: 'Author',
+    launchYear: 'Release Year',
+    total: 'Total',
+    inUse: 'In Use',
+    publisher: 'Publisher',
+    actions: 'Actions',
+    noBooksFound: 'No books found.',
+    dialog: {
+      createTitle: 'New Book',
+      editTitle: 'Edit Book',
+      titleRequired: 'Title is required!',
+      authorRequired: 'Author is required!',
+      quantityRequired: 'Total quantity is required!',
+      publisherRequired: 'Publisher is required!',
+      deleteConfirmTitle: 'Confirm Deletion',
+      deleteConfirmMessage: 'Are you sure you want to delete book "{title}"?'
     }
   }
 }
