@@ -2,13 +2,13 @@
   <q-page class="q-pa-lg bg-main-light">
     <div class="row items-center q-mb-lg">
       <h5 class="text-h5 text-weight-bold text-primary-text q-my-none">
-        {{ t('auth.users.title') }}
+        {{ t('users.title') }}
       </h5>
     </div>
 
     <div class="row items-center justify-between q-mb-md gap-md">
       <div class="col-12 col-sm-6 col-md-4">
-        <q-input v-model="searchTerm" outlined dense class="bg-white custom-search-input" :placeholder="t('auth.users.searchPlaceholder')" @update:model-value="debounceSearch">
+        <q-input v-model="searchTerm" outlined dense class="bg-white custom-search-input" :placeholder="t('users.searchPlaceholder')" @update:model-value="debounceSearch">
           <template #prepend>
             <q-icon name="search" color="grey-7" />
           </template>
@@ -16,7 +16,7 @@
       </div>
 
       <div class="relative-position">
-        <q-btn outline no-caps icon="tune" color="primary-text" class="btn-filter bg-white" :label="t('auth.common.filter')">
+        <q-btn outline no-caps icon="tune" color="primary-text" class="btn-filter bg-white" :label="t('common.filter')">
           <q-menu auto-close anchor="bottom right" self="top right" class="filter-menu-popup">
             <div class="filter-menu-box">
               <div class="filter-option" :class="{ 'filter-option-active': selectedSort === 'name,asc' }" @click="applySort('name,asc')">
@@ -26,7 +26,7 @@
                 Z - A
               </div>
               <div class="filter-option" :class="{ 'filter-option-active': selectedSort === 'id,desc' }" @click="applySort('id,desc')">
-                {{ t('auth.common.mostRecent', 'Mais Recente') }}
+                {{ t('common.mostRecent', 'Mais Recente') }}
               </div>
             </div>
           </q-menu>
@@ -38,11 +38,11 @@
       <q-markup-table flat borderless class="custom-table">
         <thead>
           <tr>
-            <th class="text-left">{{ t('auth.users.name') }}</th>
-            <th class="text-left">{{ t('auth.users.email') }}</th>
-            <th class="text-left">{{ t('auth.users.phone') }}</th>
-            <th class="text-center">{{ t('auth.users.status') }}</th>
-            <th class="text-center">{{ t('auth.users.actions') }}</th>
+            <th class="text-left">{{ t('users.name') }}</th>
+            <th class="text-left">{{ t('users.email') }}</th>
+            <th class="text-left">{{ t('users.phone') }}</th>
+            <th class="text-center">{{ t('users.status') }}</th>
+            <th class="text-center">{{ t('users.actions') }}</th>
           </tr>
         </thead>
         <tbody>
@@ -54,7 +54,7 @@
 
           <tr v-else-if="users.length === 0">
             <td colspan="5" class="text-center text-grey-7 q-pa-lg">
-              {{ t('auth.users.noUsersFound') }}
+              {{ t('users.noUsersFound') }}
             </td>
           </tr>
 
@@ -70,7 +70,7 @@
             </td>
             <td class="text-center">
               <span class="status-chip" :class="user.active ? 'status-active' : 'status-inactive'">
-                {{ user.active ? t('auth.users.active') : t('auth.users.inactive') }}
+                {{ user.active ? t('users.active') : t('users.inactive') }}
               </span>
             </td>
             <td class="text-center">
@@ -83,7 +83,7 @@
       <div class="row items-center justify-between q-pa-md pagination-bar">
         <div class="text-caption text-primary-text text-weight-medium">
           {{
-            t('auth.common.showingPagination', {
+            t('common.showingPagination', {
               from: paginationInfo.from,
               to: paginationInfo.to,
               total: paginationInfo.total

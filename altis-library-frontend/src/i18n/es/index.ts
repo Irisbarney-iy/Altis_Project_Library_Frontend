@@ -7,7 +7,7 @@ export default {
     language: 'Idioma'
   },
   menu: {
-    dashboard: 'Panel Principal',
+    dashboard: 'Dashboard',
     loans: 'Préstamos',
     users: 'Usuarios',
     books: 'Libros',
@@ -23,27 +23,27 @@ export default {
     password: 'Contraseña',
     newPassword: 'Nueva contraseña',
     confirmPassword: 'Confirmar contraseña',
-    passwordPlaceholder: 'Ingresa tu contraseña',
-    confirmPasswordPlaceholder: 'Confirma tu contraseña',
+    passwordPlaceholder: 'Ingrese su contraseña',
+    confirmPasswordPlaceholder: 'Confirme su contraseña',
     fullName: 'Nombre completo',
-    fullNamePlaceholder: 'Ingresa tu nombre',
+    fullNamePlaceholder: 'Ingrese su nombre',
     cpf: 'CPF',
     phone: 'Teléfono',
-    birthDate: 'Fecha de nacimiento',
+    birthDate: 'Fecha de Nacimiento',
     address: 'Dirección',
     addressPlaceholder: 'Calle, Nº - Ciudad, Estado',
     rememberMe: 'Recordarme',
-    forgotPassword: '¿Olvidaste tu contraseña?',
+    forgotPassword: '¿Olvidó su contraseña?',
     clear: 'Limpiar',
-    login: 'Iniciar sesión',
+    login: 'Iniciar Sesión',
     register: 'Registrarse',
     cancel: 'Cancelar',
     validateData: 'Validar datos',
     saveChanges: 'Guardar cambios',
-    noAccount: '¿No tienes una cuenta?',
-    signUpHere: 'Regístrate aquí',
-    hasAccount: '¿Ya tienes una cuenta?',
-    loginHere: 'Inicia sesión aquí',
+    noAccount: '¿No tiene una cuenta?',
+    signUpHere: 'Regístrese aquí',
+    hasAccount: '¿Ya tiene una cuenta?',
+    loginHere: 'Inicie sesión aquí',
     validation: {
       nameRequired: '¡El nombre es obligatorio!',
       nameLength: 'El nombre debe tener entre 3 y 100 caracteres',
@@ -57,32 +57,53 @@ export default {
       phoneInvalid: 'Teléfono inválido',
       birthDateRequired: '¡La fecha de nacimiento es obligatoria!',
       addressRequired: '¡La dirección es obligatoria!',
-      addressMax: 'La dirección debe tener como máximo 255 caracteres',
+      addressMax: 'La dirección no puede tener más de 255 caracteres',
       passwordRequired: 'La contraseña es obligatoria',
-      passwordRules: 'La contraseña debe tener entre 8 y 15 caracteres, letras, números y símbolos',
+      passwordRules: 'La contraseña debe contener entre 8 y 15 caracteres, letras, números y símbolos',
       confirmPasswordRequired: 'Confirme su contraseña',
       passwordMatch: 'Las contraseñas no coinciden'
     },
     notifications: {
       registerSuccess: '¡Registro realizado con éxito! Inicie sesión.',
-      registerError: 'Error al registrarse. Verifique la información.'
-    },
-    common: {
-      filter: 'Filtrar',
-      showingPagination: 'Mostrando de {from} a {to} de {total} usuarios',
-      mostRecent: 'Más Reciente'
-    },
-    users: {
-      title: 'USUARIOS',
-      searchPlaceholder: 'Buscar usuarios...',
-      name: 'Nombre',
-      email: 'Correo electrónico',
-      phone: 'Teléfono',
-      status: 'Estado',
-      actions: 'Acciones',
-      active: 'Activo',
-      inactive: 'Inactivo',
-      noUsersFound: 'No se encontraron usuarios.'
+      registerError: 'Fallo al realizar el registro. Verifique la información.'
+    }
+  },
+  common: {
+    filter: 'Filtrar',
+    showingPagination: 'Mostrando de {from} a {to} de {total} editoriales',
+    mostRecent: 'Más reciente',
+    cancel: 'Cancelar',
+    save: 'Guardar',
+    confirm: 'Confirmar'
+  },
+  users: {
+    title: 'USUARIOS',
+    searchPlaceholder: 'Buscar usuarios...',
+    name: 'Nombre',
+    email: 'Correo electrónico',
+    phone: 'Teléfono',
+    status: 'Estado',
+    actions: 'Acciones',
+    active: 'Activo',
+    inactive: 'Inactivo',
+    noUsersFound: 'No se encontraron usuarios.'
+  },
+  publishers: {
+    title: 'EDITORIALES',
+    searchPlaceholder: 'Buscar editoriales...',
+    newPublisher: 'Nueva Editorial',
+    name: 'Nombre de la Editorial',
+    email: 'Correo electrónico',
+    phone: 'Teléfono',
+    site: 'Sitio web',
+    actions: 'Acciones',
+    noPublishersFound: 'No se encontraron editoriales.',
+    dialog: {
+      createTitle: 'Nueva Editorial',
+      editTitle: 'Editar Editorial',
+      nameRequired: '¡El nombre de la editorial es obligatorio!',
+      deleteConfirmTitle: 'Confirmar Eliminación',
+      deleteConfirmMessage: '¿Está seguro de que desea eliminar la editorial "{name}"?'
     }
   }
 }

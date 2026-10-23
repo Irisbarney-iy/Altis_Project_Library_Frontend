@@ -44,7 +44,6 @@ export default {
     signUpHere: 'Cadastre-se aqui',
     hasAccount: 'Já tem uma conta?',
     loginHere: 'Faça login aqui',
-    
     validation: {
       nameRequired: 'O nome é obrigatório!',
       nameLength: 'O nome deve ter entre 3 e 100 caracteres',
@@ -67,23 +66,44 @@ export default {
     notifications: {
       registerSuccess: 'Cadastro realizado com sucesso! Faça seu login.',
       registerError: 'Falha ao realizar cadastro. Verifique as informações.'
-    },
-    common: {
-      filter: 'Filtrar',
-      showingPagination: 'Mostrando de {from} a {to} de {total} usuários',
-      mostRecent: 'Mais recente'
-    },
-    users: {
-      title: 'USUÁRIOS',
-      searchPlaceholder: 'Buscar usuários...',
-      name: 'Nome',
-      email: 'E-mail',
-      phone: 'Telefone',
-      status: 'Status',
-      actions: 'Ações',
-      active: 'Ativo',
-      inactive: 'Inativo',
-      noUsersFound: 'Nenhum usuário encontrado.'
+    }
+  },
+  common: {
+    filter: 'Filtrar',
+    showingPagination: 'Mostrando de {from} a {to} de {total} editoras',
+    mostRecent: 'Mais recente',
+    cancel: 'Cancelar',
+    save: 'Salvar',
+    confirm: 'Confirmar'
+  },
+  users: {
+    title: 'USUÁRIOS',
+    searchPlaceholder: 'Buscar usuários...',
+    name: 'Nome',
+    email: 'E-mail',
+    phone: 'Telefone',
+    status: 'Status',
+    actions: 'Ações',
+    active: 'Ativo',
+    inactive: 'Inativo',
+    noUsersFound: 'Nenhum usuário encontrado.'
+  },
+  publishers: {
+    title: 'EDITORAS',
+    searchPlaceholder: 'Buscar editoras...',
+    newPublisher: 'Nova Editora',
+    name: 'Nome da Editora',
+    email: 'E-mail',
+    phone: 'Telefone',
+    site: 'Site',
+    actions: 'Ações',
+    noPublishersFound: 'Nenhuma editora encontrada.',
+    dialog: {
+      createTitle: 'Nova Editora',
+      editTitle: 'Editar Editora',
+      nameRequired: 'O nome da editora é obrigatório!',
+      deleteConfirmTitle: 'Confirmar Exclusão',
+      deleteConfirmMessage: 'Tem certeza que deseja excluir a editora "{name}"?'
     }
   }
 }
