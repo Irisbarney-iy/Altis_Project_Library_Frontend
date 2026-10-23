@@ -186,5 +186,10 @@ export default {
     daysOverdue: 'Días de Retraso',
     noBooks: 'No tienes libros alquilados en este momento.',
     days: 'días'
+  },
+  profile: {
+    title: 'Mi Perfil',
+    subtitle: 'Vea y edite sus datos personales',
+    editProfile: 'Editar Perfil'
   }
 }

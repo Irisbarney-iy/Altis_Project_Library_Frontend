@@ -186,5 +186,10 @@ export default {
     daysOverdue: 'Days Overdue',
     noBooks: 'You currently have no rented books.',
     days: 'days'
+  },
+  profile: {
+    title: 'My Profile',
+    subtitle: 'View and edit your personal information',
+    editProfile: 'Edit Profile'
   }
 }

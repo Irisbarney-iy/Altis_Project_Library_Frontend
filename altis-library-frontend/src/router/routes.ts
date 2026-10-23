@@ -38,7 +38,8 @@ const routes: RouteRecordRaw[] = [
     path: '/user',
     component: () => import('../layouts/UserLayout.vue'),
     children: [
-      { path: 'dashboard', component: () => import('../pages/user/UserDashboard.vue') }
+      { path: 'dashboard', component: () => import('../pages/user/UserDashboard.vue') },
+      { path: 'profile', component: () => import('../pages/user/UserProfilePage.vue') }
     ]
   },
   {
