@@ -158,5 +158,17 @@ export default {
       termRequired: 'Limit date is required!',
       returnConfirmMessage: 'Confirm return of book "{book}" for renter "{user}"?'
     }
+  },
+  dashboard: {
+    title: 'DASHBOARD',
+    totalBooks: 'Total Books',
+    activeLoans: 'Active Loans',
+    monthlyLoans: 'Monthly Loans',
+    criticalAlerts: 'Critical Delay Alerts',
+    user: 'User',
+    book: 'Book',
+    daysOverdue: 'Days Overdue',
+    noDelays: 'No pending critical delay alerts.',
+    days: 'days'
   }
 }

@@ -27,7 +27,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('../layouts/AdminLayout.vue'),
     meta: { permissions: [Permissions.ADMIN] },
     children: [
-      { path: 'dashboard', component: () => import('../pages/AdminDashboard.vue') },
+      { path: 'dashboard', component: () => import('../pages/admin/AdminDashboard.vue') },
       { path: 'users', component: () => import('../pages/admin/UsersPage.vue') },
       { path: 'publishers', component: () => import('../pages/admin/PublishersPage.vue') },
       { path: 'books', component: () => import('../pages/admin/BooksPage.vue') },

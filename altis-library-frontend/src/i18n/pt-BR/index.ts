@@ -158,5 +158,17 @@ export default {
       termRequired: 'O prazo de devolução é obrigatório!',
       returnConfirmMessage: 'Confirmar a devolução do livro "{book}" do locatário "{user}"?'
     }
+  },
+  dashboard: {
+    title: 'DASHBOARD',
+    totalBooks: 'Total de Livros',
+    activeLoans: 'Empréstimos Ativos',
+    monthlyLoans: 'Empréstimos ao Mês',
+    criticalAlerts: 'Alertas Críticos de Atraso',
+    user: 'Usuário',
+    book: 'Livro',
+    daysOverdue: 'Dias de Atraso',
+    noDelays: 'Nenhum alerta de atraso crítico pendente.',
+    days: 'dias'
   }
 }

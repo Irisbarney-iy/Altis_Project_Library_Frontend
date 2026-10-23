@@ -158,5 +158,17 @@ export default {
       termRequired: '¡El plazo de devolución es obligatorio!',
       returnConfirmMessage: '¿Confirmar la devolución del libro "{book}" del arrendatario "{user}"?'
     }
+  },
+  dashboard: {
+    title: 'DASHBOARD',
+    totalBooks: 'Total de Libros',
+    activeLoans: 'Préstamos Activos',
+    monthlyLoans: 'Préstamos al Mes',
+    criticalAlerts: 'Alertas Críticas de Retraso',
+    user: 'Usuario',
+    book: 'Libro',
+    daysOverdue: 'Días de Retraso',
+    noDelays: 'No hay alertas críticas de retraso pendientes.',
+    days: 'días'
   }
 }
