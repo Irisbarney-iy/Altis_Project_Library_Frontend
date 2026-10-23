@@ -128,5 +128,35 @@ export default {
       deleteConfirmTitle: 'Confirm Deletion',
       deleteConfirmMessage: 'Are you sure you want to delete book "{title}"?'
     }
+  },
+  loans: {
+    title: 'LOANS',
+    searchPlaceholder: 'Search loans...',
+    newLoan: 'New Rental',
+    renter: 'Renter',
+    book: 'Book',
+    loanDate: 'Rental Date',
+    limitTerm: 'Limit Date',
+    returnDate: 'Returned Date',
+    status: 'Status',
+    actions: 'Actions',
+    renew: 'Renew',
+    noLoansFound: 'No loans found.',
+    statusTypes: {
+      rented: 'On Time',
+      overdue: 'Overdue',
+      returnedOnTime: 'Rtd.OnTime',
+      returnedWithDelay: 'Rtd.Delayed'
+    },
+    dialog: {
+      createTitle: 'New Rental',
+      renewTitle: 'Renew Loan',
+      returnTitle: 'Return Book',
+      newTerm: 'New Limit Date',
+      userRequired: 'Renter is required!',
+      bookRequired: 'Book is required!',
+      termRequired: 'Limit date is required!',
+      returnConfirmMessage: 'Confirm return of book "{book}" for renter "{user}"?'
+    }
   }
 }

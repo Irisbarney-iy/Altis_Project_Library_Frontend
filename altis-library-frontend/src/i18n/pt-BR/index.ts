@@ -86,7 +86,7 @@ export default {
     actions: 'Ações',
     active: 'Ativo',
     inactive: 'Inativo',
-    noUsersFound: 'Nenum usuário encontrado.'
+    noUsersFound: 'Nenhum usuário encontrado.'
   },
   publishers: {
     title: 'EDITORAS',
@@ -127,6 +127,36 @@ export default {
       publisherRequired: 'A editora é obrigatória!',
       deleteConfirmTitle: 'Confirmar Exclusão',
       deleteConfirmMessage: 'Tem certeza que deseja excluir o livro "{title}"?'
+    }
+  },
+  loans: {
+    title: 'EMPRÉSTIMOS',
+    searchPlaceholder: 'Buscar empréstimos...',
+    newLoan: 'Novo Aluguel',
+    renter: 'Locatário',
+    book: 'Livro',
+    loanDate: 'Data Aluguel',
+    limitTerm: 'Prazo',
+    returnDate: 'Entrega',
+    status: 'Status',
+    actions: 'Ações',
+    renew: 'Renovar',
+    noLoansFound: 'Nenhum empréstimo encontrado.',
+    statusTypes: {
+      rented: 'No Prazo',
+      overdue: 'Atrasado',
+      returnedOnTime: 'Entre.NP',
+      returnedWithDelay: 'Entre.CA'
+    },
+    dialog: {
+      createTitle: 'Novo Aluguel',
+      renewTitle: 'Renovar Empréstimo',
+      returnTitle: 'Devolver Livro',
+      newTerm: 'Novo Prazo',
+      userRequired: 'O locatário é obrigatório!',
+      bookRequired: 'O livro é obrigatório!',
+      termRequired: 'O prazo de devolução é obrigatório!',
+      returnConfirmMessage: 'Confirmar a devolução do livro "{book}" do locatário "{user}"?'
     }
   }
 }

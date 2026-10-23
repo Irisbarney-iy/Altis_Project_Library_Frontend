@@ -128,5 +128,35 @@ export default {
       deleteConfirmTitle: 'Confirmar Eliminación',
       deleteConfirmMessage: '¿Está seguro de que desea eliminar el libro "{title}"?'
     }
+  },
+  loans: {
+    title: 'PRÉSTAMOS',
+    searchPlaceholder: 'Buscar préstamos...',
+    newLoan: 'Nuevo Alquiler',
+    renter: 'Arrendatario',
+    book: 'Libro',
+    loanDate: 'Fecha Alquiler',
+    limitTerm: 'Plazo',
+    returnDate: 'Entrega',
+    status: 'Estado',
+    actions: 'Acciones',
+    renew: 'Renovar',
+    noLoansFound: 'No se encontraron préstamos.',
+    statusTypes: {
+      rented: 'A Tiempo',
+      overdue: 'Atrasado',
+      returnedOnTime: 'Entre.NP',
+      returnedWithDelay: 'Entre.CA'
+    },
+    dialog: {
+      createTitle: 'Nuevo Alquiler',
+      renewTitle: 'Renovar Préstamo',
+      returnTitle: 'Devolver Libro',
+      newTerm: 'Nuevo Plazo',
+      userRequired: '¡El arrendatario es obligatorio!',
+      bookRequired: '¡El libro es obligatorio!',
+      termRequired: '¡El plazo de devolución es obligatorio!',
+      returnConfirmMessage: '¿Confirmar la devolución del libro "{book}" del arrendatario "{user}"?'
+    }
   }
 }
