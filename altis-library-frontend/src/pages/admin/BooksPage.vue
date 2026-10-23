@@ -16,12 +16,10 @@
       </div>
 
       <div class="row items-center q-gutter-sm">
-
         <q-btn outline no-caps icon="tune" color="primary-text" class="btn-filter bg-white" :label="t('common.filter', 'Filtrar')">
           <q-menu auto-close anchor="bottom right" self="top right" class="filter-menu-popup">
             <div class="filter-menu-box">
-              <div
-                class="filter-option" :class="{ 'filter-option-active': selectedSort === 'title,asc' }" @click="applySort('title,asc')">
+              <div class="filter-option" :class="{ 'filter-option-active': selectedSort === 'title,asc' }" @click="applySort('title,asc')">
                 A - Z
               </div>
               <div class="filter-option" :class="{ 'filter-option-active': selectedSort === 'title,desc' }" @click="applySort('title,desc')">
@@ -65,28 +63,16 @@
           </tr>
 
           <tr v-for="book in books" :key="book.id" class="table-row">
-            <td class="text-left text-weight-medium text-primary-text">
-              {{ book.title }}
-            </td>
-            <td class="text-left text-primary-text">
-              {{ book.author || '-' }}
-            </td>
-            <td class="text-left text-primary-text">
-              {{ getYearDisplay(book) }}
-            </td>
-            <td class="text-left text-primary-text">
-              {{ getTotalQuantity(book) }}
-            </td>
-            <td class="text-left text-primary-text">
-              {{ getInUseQuantity(book) }}
-            </td>
-            <td class="text-left text-primary-text">
-              {{ getPublisherDisplay(book) }}
-            </td>
+            <td class="text-left text-weight-medium text-primary-text">{{ book.title }}</td>
+            <td class="text-left text-primary-text">{{ book.author || '-' }}</td>
+            <td class="text-left text-primary-text">{{ getYearDisplay(book) }}</td>
+            <td class="text-left text-primary-text">{{ getTotalQuantity(book) }}</td>
+            <td class="text-left text-primary-text">{{ getInUseQuantity(book) }}</td>
+            <td class="text-left text-primary-text">{{ getPublisherDisplay(book) }}</td>
             <td class="text-center">
               <div class="row justify-center items-center q-gutter-xs">
-                <q-btn flat dense icon="edit" class="action-btn" @click="openEditDialog(book)"/>
-                <q-btn flat dense icon="delete_outline" class="action-btn" @click="openDeleteDialog(book)"/>
+                <q-btn flat dense icon="edit" class="action-btn" @click="openEditDialog(book)" />
+                <q-btn flat dense icon="delete_outline" class="action-btn" @click="openDeleteDialog(book)" />
               </div>
             </td>
           </tr>
@@ -107,8 +93,7 @@
         <div class="row items-center q-gutter-xs">
           <q-btn outline dense icon="chevron_left" class="page-btn" :disable="currentPage === 0" @click="changePage(currentPage - 1)"/>
 
-          <q-btn
-            v-for="page in totalPages" :key="page"unelevated dense class="page-number-btn" :class="{ 'page-btn-active': page - 1 === currentPage }" :label="page" @click="changePage(page - 1)"/>
+          <q-btn v-for="page in totalPages" :key="page" unelevated dense class="page-number-btn" :class="{ 'page-btn-active': page - 1 === currentPage }" :label="page" @click="changePage(page - 1)"/>
 
           <q-btn outline dense icon="chevron_right" class="page-btn" :disable="currentPage >= totalPages - 1" @click="changePage(currentPage + 1)"/>
         </div>
@@ -127,44 +112,34 @@
         <q-card-section class="q-px-lg q-py-md">
           <q-form ref="formRef" @submit="handleSaveBook" class="q-gutter-y-sm">
             <div>
-              <div class="text-caption text-weight-bold text-primary-text q-mb-xs">
-                {{ t('books.bookTitle', 'Título') }}
-              </div>
-              <q-input v-model="form.title" outlined dense hide-bottom-space class="modal-input" :rules="[val => (!!val && val.trim() !== '') || t('books.dialog.titleRequired', 'O título é obrigatório!')]"/>
+              <div class="text-caption text-weight-bold text-primary-text q-mb-xs">{{ t('books.bookTitle', 'Título') }}</div>
+              <q-input
+                v-model="form.title" outlined dense hide-bottom-space class="modal-input" :rules="[val => (!!val && val.trim() !== '') || t('books.dialog.titleRequired', 'O título é obrigatório!')]"/>
             </div>
 
             <div>
-              <div class="text-caption text-weight-bold text-primary-text q-mb-xs">
-                {{ t('books.author', 'Autor') }}
-              </div>
-              <q-input v-model="form.author" outlined dense hide-bottom-space class="modal-input" :rules="[val => (!!val && val.trim() !== '') || t('books.dialog.authorRequired', 'O autor é obrigatório!')]"/>
+              <div class="text-caption text-weight-bold text-primary-text q-mb-xs">{{ t('books.author', 'Autor') }}</div>
+              <q-input v-model="form.author" outlined dense ide-bottom-space class="modal-input" :rules="[val => (!!val && val.trim() !== '') || t('books.dialog.authorRequired', 'O autor é obrigatório!')]"/>
             </div>
 
             <div>
-              <div class="text-caption text-weight-bold text-primary-text q-mb-xs">
-                {{ t('books.launchYear', 'Lançamento') }}
-              </div>
+              <div class="text-caption text-weight-bold text-primary-text q-mb-xs">{{ t('books.launchYear', 'Lançamento') }}</div>
               <q-input v-model.number="form.releaseYear" outlined dense type="number" hide-bottom-space placeholder="Ex: 1999" class="modal-input" :rules="[val => (val !== null && val !== undefined && val !== '') || t('books.dialog.releaseYearRequired', 'A data de lançamento é obrigatória!')]"/>
             </div>
 
             <div>
-              <div class="text-caption text-weight-bold text-primary-text q-mb-xs">
-                {{ t('books.total', 'Quantidade Total') }}
-              </div>
+              <div class="text-caption text-weight-bold text-primary-text q-mb-xs">{{ t('books.total', 'Quantidade Total') }}</div>
               <q-input v-model.number="form.totalQuantity" outlined dense type="number" hide-bottom-space class="modal-input" :rules="[val => (val !== null && val !== undefined && val >= 0) || t('books.dialog.quantityRequired', 'A quantidade total é obrigatória!')]"/>
             </div>
 
             <div>
-              <div class="text-caption text-weight-bold text-primary-text q-mb-xs">
-                {{ t('books.publisher', 'Editora') }}
-              </div>
+              <div class="text-caption text-weight-bold text-primary-text q-mb-xs">{{ t('books.publisher', 'Editora') }}</div>
               <q-select v-model="form.publisherId" outlined dense emit-value map-options hide-bottom-space :options="publisherOptions" class="modal-input" :rules="[val => !!val || t('books.dialog.publisherRequired', 'A editora é obrigatória!')]"/>
             </div>
 
             <div class="row justify-end q-gutter-sm q-pt-md">
-              <q-btn
-                outline no-caps class="btn-cancel" :label="t('common.cancel', 'Cancelar')" v-close-popup/>
-              <q-btn unelevated no-caps type="submit" :label="t('common.save', 'Salvar')" class="btn-save" :loading="submitting"/>
+              <q-btn outline no-caps class="btn-cancel" :label="t('common.cancel', 'Cancelar')" v-close-popup />
+              <q-btn unelevated no-caps type="submit" class="btn-save" :label="t('common.save', 'Salvar')" :loading="submitting" />
             </div>
           </q-form>
         </q-card-section>
@@ -174,9 +149,7 @@
     <q-dialog v-model="isDeleteDialogOpen" persistent>
       <q-card class="dialog-card">
         <q-card-section class="row items-center justify-between bg-dialog-header">
-          <div class="text-h6 text-weight-bold text-primary-text">
-            {{ t('books.dialog.deleteConfirmTitle', 'Confirmar Exclusão') }}
-          </div>
+          <div class="text-h6 text-weight-bold text-primary-text">{{ t('books.dialog.deleteConfirmTitle', 'Confirmar Exclusão') }}</div>
           <q-btn icon="close" flat round dense v-close-popup color="primary-text" />
         </q-card-section>
 
@@ -185,10 +158,8 @@
         </q-card-section>
 
         <q-card-actions align="right" class="q-pb-md q-px-md">
-          <q-btn
-            outline no-caps class="btn-cancel" :label="t('common.cancel', 'Cancelar')" v-close-popup/>
-          <q-btn
-            unelevated no-caps color="negative" :label="t('common.confirm', 'Confirmar')" :loading="deleting" @click="handleDeleteBook"/>
+          <q-btn outline no-caps class="btn-cancel" :label="t('common.cancel', 'Cancelar')" v-close-popup />
+          <q-btn unelevated no-caps color="negative" :label="t('common.confirm', 'Confirmar')" :loading="deleting" @click="handleDeleteBook" />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -321,7 +292,6 @@ async function loadPublisherOptions() {
 
 async function fetchBooks() {
   loading.value = true
-
   try {
     const response = await api.get<SpringPageResponse<Book>>('/books/search', {
       params: {
@@ -331,7 +301,6 @@ async function fetchBooks() {
         sort: selectedSort.value
       }
     })
-
     books.value = response.data.content
     totalElements.value = response.data.totalElements
     totalPages.value = response.data.totalPages
@@ -396,7 +365,6 @@ function openEditDialog(book: Book) {
 
 async function handleSaveBook() {
   submitting.value = true
-
   try {
     const payload = {
       title: form.title.trim(),
@@ -435,7 +403,6 @@ function openDeleteDialog(book: Book) {
 async function handleDeleteBook() {
   if (!bookToDelete.value?.id) return
   deleting.value = true
-
   try {
     await api.delete(`/books/${bookToDelete.value.id}`)
     $q.notify({ type: 'positive', message: 'Livro excluído com sucesso!' })
@@ -504,7 +471,6 @@ onMounted(() => {
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 .filter-option:not(:last-child) {
@@ -540,10 +506,6 @@ onMounted(() => {
 
 .table-row {
   border-bottom: 1px solid #E5C396;
-}
-
-.table-row:last-child {
-  border-bottom: none;
 }
 
 .action-btn {

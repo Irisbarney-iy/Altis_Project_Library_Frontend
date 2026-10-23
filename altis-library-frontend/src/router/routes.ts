@@ -37,9 +37,8 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/user',
     component: () => import('../layouts/UserLayout.vue'),
-    meta: { permissions: [Permissions.USER] },
     children: [
-      { path: 'dashboard', component: () => import('../pages/UserDashboard.vue') }
+      { path: 'dashboard', component: () => import('../pages/user/UserDashboard.vue') }
     ]
   },
   {

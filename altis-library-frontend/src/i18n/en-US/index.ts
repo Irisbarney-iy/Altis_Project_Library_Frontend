@@ -170,5 +170,21 @@ export default {
     daysOverdue: 'Days Overdue',
     noDelays: 'No pending critical delay alerts.',
     days: 'days'
+  },
+  userDashboard: {
+    title: 'DASHBOARD',
+    activeLoans: 'Active Loans',
+    booksWithYou: 'Books with you',
+    delays: 'Delays',
+    booksOverdue: 'Overdue books',
+    withdrawals: 'Withdrawals',
+    myBooks: 'My books',
+    book: 'Book',
+    author: 'Author',
+    loanDate: 'Rental Date',
+    limitTerm: 'Limit Date',
+    daysOverdue: 'Days Overdue',
+    noBooks: 'You currently have no rented books.',
+    days: 'days'
   }
 }

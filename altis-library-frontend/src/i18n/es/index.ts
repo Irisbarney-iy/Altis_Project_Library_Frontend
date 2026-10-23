@@ -170,5 +170,21 @@ export default {
     daysOverdue: 'Días de Retraso',
     noDelays: 'No hay alertas críticas de retraso pendientes.',
     days: 'días'
+  },
+  userDashboard: {
+    title: 'DASHBOARD',
+    activeLoans: 'Préstamos Activos',
+    booksWithYou: 'Libros en tu poder',
+    delays: 'Retrasos',
+    booksOverdue: 'Libros atrasados',
+    withdrawals: 'Retiros',
+    myBooks: 'Mis libros',
+    book: 'Libro',
+    author: 'Autor',
+    loanDate: 'Fecha Alquiler',
+    limitTerm: 'Plazo',
+    daysOverdue: 'Días de Retraso',
+    noBooks: 'No tienes libros alquilados en este momento.',
+    days: 'días'
   }
 }
