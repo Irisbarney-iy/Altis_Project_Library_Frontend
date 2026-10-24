@@ -2,8 +2,8 @@
   <div class="column no-wrap full-height auth-container" style="min-height: 100vh;">
     <div class="col-auto bg-main-dark auth-top-banner flex flex-center q-py-lg text-white">
       <div class="text-center">
-        <q-icon name="menu_book" size="80px" color="white" />
-        <h4 class="text-weight-bold q-mt-xs text-white">BibliotecaBooks</h4>
+        <q-icon name="menu_book" size="80px" color="amber-1" />
+        <h4 class="text-weight-bold q-mt-xs text-amber-1">BibliotecaBooks</h4>
       </div>
     </div>
 
